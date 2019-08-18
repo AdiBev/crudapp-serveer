@@ -14,6 +14,9 @@ mongoose.connect(keys.mongoURI, {
 
 const app = express();
 
+//this serves static files ex: imgs/html/css files
+app.use(express.static("public"));
+
 app.use(bodyParser.json());
 
 //routes intiate
@@ -28,3 +31,5 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT);
 
 //db password 2xr828HwZLFM6wZ
+
+//db password2 kjaCLMucwijOysgb
