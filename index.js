@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const keys = require("./config/keys");
 
@@ -19,6 +20,8 @@ app.use(express.static("public"));
 
 app.use(bodyParser.json());
 
+//using cors here 
+app.use(cors());
 //routes intiate
 app.use("/api", require("./routes/api"));
 
@@ -32,4 +35,4 @@ app.listen(PORT);
 
 //db password 2xr828HwZLFM6wZ
 
-//db password2 kjaCLMucwijOysgb
+//db password2
