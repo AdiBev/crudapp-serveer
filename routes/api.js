@@ -61,7 +61,7 @@ router.get("/nearbypokemons", async (req, res) => {
         $geoNear: {
           near: {
             type: "Point",
-            coordinates: [parseFloat(req.query.lng), parseFloat(req.query.lat)]
+            coordinates: [parseFloat(req.query.lat), parseFloat(req.query.lng)]
           },
           spherical: true,
           maxDistance: 100000,
